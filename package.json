@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/abarhub/tinychess#readme",
   "dependencies": {
-    "@gmolaire/chessboardjs": "^1.0.0",
-    "chess.js": "^1.0.0-alpha.0"
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess.js": "^1.0.0-alpha.0",
+    "jquery": "^3.6.3"
   },
   "devDependencies": {
-    "parcel": "^2.8.2"
+    "parcel": "^2.8.2",
+    "parcel-reporter-static-files-copy": "^1.5.0"
   }
 }

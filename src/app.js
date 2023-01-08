@@ -2,4 +2,8 @@
 
 console.log('Hello world!');
 
-var board1 = Chessboard('board1', 'start')
+var config = {
+    pieceTheme: 'img/chesspieces/wikipedia/{piece}.png',
+    position: 'start'
+}
+var board1 = Chessboard('board1', config)
