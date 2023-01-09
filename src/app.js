@@ -1,4 +1,6 @@
 
+// import Chess from './node_module/node_modules/chess.js/dist/chess.js'
+import { Chess } from 'chess.js'
 
 console.log('Hello world!');
 
@@ -10,7 +12,7 @@ function makeRandomMove () {
     var possibleMoves = game.moves()
 
     // exit if the game is over
-    if (game.game_over()) return
+    if (game.isGameOver()) return
 
     var randomIdx = Math.floor(Math.random() * possibleMoves.length)
     game.move(possibleMoves[randomIdx])
