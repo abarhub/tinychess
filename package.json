@@ -2,10 +2,12 @@
   "name": "tinychess",
   "version": "1.0.0",
   "description": "chess",
-  "main": "index.js",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "npx parcel src/index.html",
-    "build": "parcel build",
+    "prebuild": "del docs\\*.js docs\\*.css docs\\*.map",
+    "build": "parcel build src/index.html --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +30,12 @@
   },
   "devDependencies": {
     "parcel": "^2.8.2",
-    "parcel-reporter-static-files-copy": "^1.5.0"
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "rimraf": "^3.0.2"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./docs"
+    }
   }
 }
